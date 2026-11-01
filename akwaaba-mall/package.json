@@ -1,0 +1,9 @@
+{
+  "name": "akwaaba-mall",
+  "version": "1.0.0",
+  "description": "Ghana market-style mall: drinks hall, pantry, cold store, fresh market, bakery and home care. PWA + Node + SQLite.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js", "dev": "node --watch server.js" },
+  "engines": { "node": ">=22.13" },
+  "license": "MIT"
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-GH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Akwaaba Mall</title>
+  <meta name="description" content="Walk through the mall, shop drinks, food stuffs and cold store items, pay with MoMo and track your delivery.">
+  <meta name="theme-color" content="#0c3b2e">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" href="/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Akwaaba Mall">
+  <link rel="preload" href="/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#view">Skip to content</a>
+
+  <header class="top" id="top">
+    <a class="logo" href="#/" aria-label="Akwaaba Mall, home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#ffc21a"/><path d="M8 17h24l-2-7H10z" fill="#0c3b2e"/><path d="M10 17v13h20V17" fill="none" stroke="#0c3b2e" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 30v-7h6v7" fill="#0c3b2e"/></svg>
+      <span class="logo-name" id="brandName">Akwaaba Mall</span>
+    </a>
+    <nav class="desk-nav" aria-label="Main">
+      <a href="#/" data-nav="home">Mall</a>
+      <a href="#/stores" data-nav="stores">Stores</a>
+      <a href="#/track" data-nav="track">Orders</a>
+    </nav>
+    <form class="search" id="searchForm" role="search" autocomplete="off">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search rice, tilapia, Fanta…" aria-label="Search all stores" enterkeyhint="search">
+    </form>
+    <button class="btn-install" id="installBtn" hidden>Install app</button>
+    <a class="desk-cart" href="#/cart" aria-label="Cart"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a1 1 0 0 0 1 .8h9.3a1 1 0 0 0 1-.8L20.5 8H6"/></svg><b class="count" data-cart-count>0</b></a>
+    <a class="desk-acc" href="#/account" aria-label="Account" data-nav="account"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg><span id="accLabel">Account</span></a>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <a class="cartbar" id="cartBar" href="#/cart" hidden>
+    <span class="cb-count" data-cart-count>0</span>
+    <span class="cb-text">View cart</span>
+    <span class="cb-total" id="cartTotal">GH₵0.00</span>
+  </a>
+
+  <nav class="tabs" id="tabs" aria-label="Main">
+    <a href="#/" data-nav="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Mall</span></a>
+    <a href="#/stores" data-nav="stores"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a2.7 2.7 0 0 0 5.3 0 2.7 2.7 0 0 0 5.4 0A2.7 2.7 0 0 0 20 9"/><path d="M5 12v8h14v-8"/><path d="M10 20v-5h4v5"/></svg><span>Stores</span></a>
+    <a href="#/cart" data-nav="cart"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.6 12.4a1 1 0 0 0 1 .8h9.3a1 1 0 0 0 1-.8L20.5 8H6"/></svg><span>Cart</span><b class="count" data-cart-count>0</b></a>
+    <a href="#/track" data-nav="track"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg><span>Orders</span></a>
+    <a href="#/account" data-nav="account"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg><span>Account</span></a>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="portal" id="portal" aria-hidden="true"></div>
+  <noscript><p style="padding:2rem">Please enable JavaScript to shop at Akwaaba Mall.</p></noscript>
+  <script src="/app.js"></script>
+</body>
+</html>
